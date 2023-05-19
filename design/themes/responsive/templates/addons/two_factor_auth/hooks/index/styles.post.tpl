@@ -1,0 +1,1 @@
+{style src="addons/two_factor_auth/styles.less"}
