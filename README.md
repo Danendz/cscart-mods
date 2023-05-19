@@ -35,12 +35,7 @@ php7.4-mysql php7.4-soap php7.4-zip \
 php7.4-gd php7.4-xml php7.4-iconv \
 php7.4-mbstring git
 ```
-
-### То сначала нужно вызывать:
-
-1. `sudo apt install libgd3`
-2. А затем установить PHP
-
+  
 ### Настройка git
 ```sh
 mkdir -p ~/apache_htdocs/public_html/cscartmods.devel ; \
