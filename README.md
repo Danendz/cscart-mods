@@ -82,7 +82,7 @@ CREATE DATABASE cscartmods;
 ```
 
 ```sh
-unzip -p ~/apache_htdocs/public_html/cscartmods.devel/var/backups/cscartadditional.sql.zip \
+unzip -p ~/apache_htdocs/public_html/cscartmods.devel/var/backups/cscartmods.sql.zip \
 | mysql -u dev -p cscartmods
 ```
 
