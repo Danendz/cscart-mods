@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<addon scheme="4.0">
+    <id>two_factor_auth</id>
+    <version>1.0</version>
+    <priority>2900</priority>
+    <position>0</position>
+    <status>active</status>
+    <default_language>ru</default_language>
+
+    <autoload>
+        <psr4 prefix="Tygh\Addons\TwoFactorAuth\">src</psr4>
+    </autoload>
+
+    <bootstrap>\Tygh\Addons\TwoFactorAuth\Bootstrap</bootstrap>
+    <installer>\Tygh\Addons\TwoFactorAuth\Installer</installer>
+    <settings edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="max_attempts">
+                        <type>input</type>
+                        <default_value>3</default_value>
+                    </item>
+                    <item id="code_length">
+                        <type>input</type>
+                        <default_value>4</default_value>
+                    </item>
+                    <item id="email_life_time_in_minutes">
+                        <type>input</type>
+                        <default_value>5</default_value>
+                    </item>
+                    <item id="interval_between_emails_in_minutes">
+                        <type>input</type>
+                        <default_value>1</default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>

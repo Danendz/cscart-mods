@@ -1,0 +1,89 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::two_factor_auth"
+msgid "Two Factor Auth"
+msgstr "Двухфакторная аутентификация"
+
+msgctxt "Addons::description::two_factor_auth"
+msgid "You can force enable two factor auth for customers"
+msgstr "Вы можете включить двухфакторную аутентификации для покупателей"
+
+msgctxt "Languages::two_factor_auth_send_code"
+msgid "Send code"
+msgstr "Отправить код"
+
+msgctxt "Languages::two_factor_auth_confirm_code"
+msgid "Confrim code"
+msgstr "Подтвердить код"
+
+msgctxt "Languages::two_factor_auth_verify"
+msgid "Two Factor Auth: Verify your login"
+msgstr "Двухфакторная аутентификация: Подтвердите ваш вход"
+
+msgctxt "Languages::two_factor_auth_verify"
+msgid "Two Factor Auth: Verify your login"
+msgstr "Двухфакторная аутентификация: Подтвердите ваш вход"
+
+msgctxt "Languages::two_factor_auth_success_code_send"
+msgid "Code was sent successfully to your email"
+msgstr "Код успешно был отправлен на ваш email"
+
+msgctxt "Languages::two_factor_auth_unable_send_email"
+msgid "Unable to send email"
+msgstr "Неполучилось отправить email"
+
+msgctxt "Languages::two_factor_auth_can_send_code_after"
+msgid "You can send code again after:"
+msgstr "Вы можете отправить повторно код через:"
+
+msgctxt "Languages::two_factor_auth_minutes"
+msgid "Minutes"
+msgstr "Минуты"
+
+msgctxt "Languages::two_factor_auth_seconds"
+msgid "Seconds"
+msgstr "Секунды"
+
+msgctxt "Languages::two_factor_auth_not_send_code_yet"
+msgid "You haven't sent the code yet"
+msgstr "Вы еще не отправили код"
+
+msgctxt "Languages::two_factor_auth_empty_field"
+msgid "You have not entered a code"
+msgstr "Вы не ввели код"
+
+msgctxt "Languages::two_factor_auth_code_expired"
+msgid "This code has already expired"
+msgstr "Срок действия этого кода уже истек"
+
+msgctxt "Languages::two_factor_auth_invalid_code"
+msgid "You have entered an invalid code"
+msgstr "Вы ввели неверный код"
+
+msgctxt "Languages::two_factor_auth_remain_attempts"
+msgid "Attempts left"
+msgstr "Попыток осталось"
+
+msgctxt "Languages::two_factor_auth_text_confirm_code"
+msgid "Please copy this code and enter it to 'code' field"
+msgstr "Пожалуйста, скопируйте этот код и введите его в поле 'код'"
+
+msgctxt "SettingsOptions::two_factor_auth::max_attempts"
+msgid "Max allowed attempts to conifrm code"
+msgstr "Максимальное количество попыток подтвердить код"
+
+msgctxt "SettingsOptions::two_factor_auth::code_length"
+msgid "Code length"
+msgstr "Длина кода"
+
+msgctxt "SettingsOptions::two_factor_auth::email_life_time_in_minutes"
+msgid "Max email code life time in minutes"
+msgstr "Максимальное время жизни email кода в минутах"
+
+msgctxt "SettingsOptions::two_factor_auth::interval_between_emails_in_minutes"
+msgid "Interval between sending email codes in minutes"
+msgstr "Интервал между отправкой email кодов в минутах"
