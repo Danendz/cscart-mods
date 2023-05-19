@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>age_restriction</id>
+    <version>1.0</version>
+    <priority>5000</priority>
+    <position>0</position>
+    <status>active</status>
+    <default_language>ru</default_language>
+    <settings edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="min_age">
+                        <type>input</type>
+                        <default_value>18</default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>

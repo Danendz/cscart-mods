@@ -1,0 +1,33 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+
+msgctxt "Addons::name::age_restriction"
+msgid "Age restriction"
+msgstr "Age restriction (additional task)"
+
+msgctxt "Addons::description::age_restriction"
+msgid "You can restrict access by age for visitors"
+msgstr "You can restrict access by age for visitors"
+
+msgctxt "Languages::age_restriction_confirm_age"
+msgid "Confirm your age"
+msgstr "Confirm your age"
+
+msgctxt "Languages::age_restriction_birthday"
+msgid "Your birthday"
+msgstr "Your birthday"
+
+msgctxt "Languages::age_restriction_min_age_to_access"
+msgid "Minimum age to access"
+msgstr "Minimum age to access"
+
+msgctxt "Languages::age_restriction_access_restricted_by_age"
+msgid "Access to the site is closed because the age is not verified"
+msgstr "Access to the site is closed because the age is not verified"
+
+msgctxt "SettingsOptions::age_restriction::min_age"
+msgid "Minimum age"
+msgstr "Minimum age"
