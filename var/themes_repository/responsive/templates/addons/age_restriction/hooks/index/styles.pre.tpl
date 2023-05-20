@@ -1,1 +1,0 @@
-{style src="addons/age_restriction/style.less"}
