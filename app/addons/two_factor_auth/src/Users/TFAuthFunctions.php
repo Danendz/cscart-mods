@@ -75,7 +75,10 @@ class TFAuthFunctions
     public function sendEmailCode()
     {
         $email_code = '';
-        $email_code = str_replace('-', '', fn_generate_code('', $this->tf_auth_constants->getMaxCodeLength()));
+        $email_code = str_replace('-', '', fn_generate_code(
+            '',
+            $this->tf_auth_constants->getMaxCodeLength()
+        ));
 
         $user_email = $this->tf_auth->get('user_email');
 
@@ -92,8 +95,9 @@ class TFAuthFunctions
         $this->tf_auth->set('code', $email_code);
         $this->tf_auth->set('sent_at', time());
 
-        $expires_at = strtotime('+' .
-            $this->tf_auth_constants->getMaxEmailLifeTimeInMinutes() . 'minutes');
+        $expires_at = strtotime(
+            '+' . $this->tf_auth_constants->getMaxEmailLifeTimeInMinutes() . 'minutes'
+        );
 
         $this->tf_auth->set('expires_at', $expires_at);
 
@@ -125,14 +129,18 @@ class TFAuthFunctions
     {
         $from = 'default_company_support_department';
 
-        return $this->mailer->send([
-            'to' => $to,
-            'from' => $from,
-            'reply_to' => 'company_users_department',
-            'data' => [
-                'email_code' => $email_code
+        return $this->mailer->send(
+            [
+                'to' => $to,
+                'from' => $from,
+                'reply_to' => 'company_users_department',
+                'data' => [
+                    'email_code' => $email_code
+                ],
+                'tpl' => 'addons/two_factor_auth/confirm_code.tpl'
             ],
-            'tpl' => 'addons/two_factor_auth/confirm_code.tpl'
-        ], SiteArea::STOREFRONT, CART_LANGUAGE);
+            SiteArea::STOREFRONT,
+            CART_LANGUAGE
+        );
     }
 }

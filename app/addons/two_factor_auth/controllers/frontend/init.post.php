@@ -23,13 +23,16 @@ use Tygh\Registry;
 
 $tf_auth = ServiceProvider::getTFAuthEntity();
 
+if ($tf_auth->getIsVerified() === TwoFactorAuthTypes::VERIFIED) {
+    return;
+}
+
 $current_url = fn_url(Registry::get('config.current_url'));
 $verification_url = fn_url('two_factor_auth.verify');
 
 if (
     !fn_compare_dispatch($current_url, $verification_url)
-    && $tf_auth->getIsVerified() === TwoFactorAuthTypes::NOT_VERIFIED
-    && $_SERVER['REQUEST_METHOD'] !== 'POST'
+    && empty($_REQUEST['is_ajax'])
 ) {
     $tf_auth->unset();
 }
