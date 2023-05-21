@@ -18,7 +18,6 @@ namespace Tygh\Addons\TwoFactorAuth\Users;
 use Tygh\Addons\TwoFactorAuth\Enum\TwoFactorAuthTypes;
 use Tygh\Addons\TwoFactorAuth\ServiceProvider;
 use Tygh\Application;
-use Tygh\Enum\NotificationSeverity;
 use Tygh\Enum\SiteArea;
 use Tygh\Mailer\Mailer;
 
@@ -56,9 +55,11 @@ class TFAuthFunctions
 
         $now = time();
 
-        $sent_at = strtotime('+'
-            . $this->tf_auth_constants->getIntervalBetweenEmailCodesInMinutes()
-            . ' minutes', $sent_at);
+        $sent_at = strtotime(
+            '+' . $this->tf_auth_constants->getIntervalBetweenEmailCodesInMinutes()
+                . ' minutes',
+            $sent_at
+        );
 
         $interval = $sent_at - $now;
         $interval_seconds = $interval % 60;
