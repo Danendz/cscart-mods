@@ -60,14 +60,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 NotificationSeverity::NOTICE,
                 __('notice'),
                 __('two_factor_auth_can_send_code_after') . ' ' .
-                    "$interval_minutes " . __('two_factor_auth_minutes') . ' ' .
-                    "$interval_seconds " . __('two_factor_auth_seconds')
+                    "{$interval_minutes} " . __('two_factor_auth_minutes') . ' ' .
+                    "{$interval_seconds} " . __('two_factor_auth_seconds')
             );
         }
 
         return [CONTROLLER_STATUS_OK, $verify_url];
     } elseif ($mode === 'confirm_code') {
-        $verify_code = isset($_REQUEST['verify_code']) ? fn_strtolower($_REQUEST['verify_code']) : '';
+        $verify_code = isset($_REQUEST['verify_code'])
+            ? fn_strtolower($_REQUEST['verify_code'])
+            : '';
 
         $attempts = $tf_auth->get('attempts');
         $expires_at = $tf_auth->get('expires_at');
@@ -120,11 +122,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $tf_auth->set('attempts', $attempts);
 
         if ($attempts <= 0) {
+            $login_form_url = fn_url('auth.login_form');
             if (defined('AJAX_REQUEST')) {
-                Tygh::$app['ajax']->assign('force_redirection', fn_url('auth.login_form'));
+                Tygh::$app['ajax']->assign('force_redirection', $login_form_url);
             }
 
-            return [CONTROLLER_STATUS_REDIRECT, fn_url('auth.login_form')];
+            return [CONTROLLER_STATUS_REDIRECT, $login_form_url];
         }
 
         $invalid_code_text = __('two_factor_auth_invalid_code');
@@ -132,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         fn_set_notification(
             NotificationSeverity::WARNING,
             __('warning'),
-            "$invalid_code_text. $remain_attempts_text: $attempts"
+            "{$invalid_code_text}. {$remain_attempts_text}: {$attempts}"
         );
 
         return [CONTROLLER_STATUS_OK, $verify_url];

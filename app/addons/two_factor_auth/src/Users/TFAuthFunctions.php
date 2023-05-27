@@ -54,10 +54,10 @@ class TFAuthFunctions
         $sent_at = $this->tf_auth->get('sent_at');
 
         $now = time();
+        $email_interval = $this->tf_auth_constants->getIntervalBetweenEmailCodesInMinutes();
 
         $sent_at = strtotime(
-            '+' . $this->tf_auth_constants->getIntervalBetweenEmailCodesInMinutes()
-                . ' minutes',
+            "+{$email_interval} minutes",
             $sent_at
         );
 
@@ -95,9 +95,10 @@ class TFAuthFunctions
 
         $this->tf_auth->set('code', $email_code);
         $this->tf_auth->set('sent_at', time());
+        $email_lifetime = $this->tf_auth_constants->getMaxEmailLifeTimeInMinutes();
 
         $expires_at = strtotime(
-            '+' . $this->tf_auth_constants->getMaxEmailLifeTimeInMinutes() . 'minutes'
+            "+{$email_lifetime} minutes"
         );
 
         $this->tf_auth->set('expires_at', $expires_at);

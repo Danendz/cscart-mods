@@ -41,12 +41,12 @@ msgid "You can send code again after:"
 msgstr "You can send code again after:"
 
 msgctxt "Languages::two_factor_auth_minutes"
-msgid "Minutes"
-msgstr "Minutes"
+msgid "minutes"
+msgstr "minutes"
 
 msgctxt "Languages::two_factor_auth_seconds"
-msgid "Seconds"
-msgstr "Seconds"
+msgid "seconds"
+msgstr "seconds"
 
 msgctxt "Languages::two_factor_auth_not_send_code_yet"
 msgid "You haven't sent the code yet"

@@ -16,7 +16,6 @@
 namespace Tygh\Addons\TwoFactorAuth\Users;
 
 use Tygh\Application;
-use Tygh\Tygh;
 
 /**
  * Class Users TFAuthEntity
@@ -25,6 +24,8 @@ use Tygh\Tygh;
  */
 class TFAuthEntity
 {
+    protected Application $app;
+
     /**
      * TFAuthEntity constructor.
      *
@@ -32,6 +33,7 @@ class TFAuthEntity
      */
     public function __construct(Application $app)
     {
+        $this->app = $app;
         $tf_auth = &$app['session']['tf_auth'];
         if (empty($tf_auth)) {
             $tf_auth = [];
@@ -47,7 +49,7 @@ class TFAuthEntity
      */
     public function get($key)
     {
-        return Tygh::$app['session']['tf_auth'][$key] ?? '';
+        return $this->app['session']['tf_auth'][$key] ?? '';
     }
 
     /**
@@ -60,7 +62,7 @@ class TFAuthEntity
      */
     public function set($key, $value)
     {
-        Tygh::$app['session']['tf_auth'][$key] = $value;
+        $this->app['session']['tf_auth'][$key] = $value;
     }
 
     /**
@@ -70,7 +72,7 @@ class TFAuthEntity
      */
     public function unset()
     {
-        unset(Tygh::$app['session']['tf_auth']);
+        unset($this->app['session']['tf_auth']);
     }
 
     /**
@@ -80,7 +82,7 @@ class TFAuthEntity
      */
     public function getIsVerified()
     {
-        return Tygh::$app['session']['auth']['is_verified'] ?? '';
+        return $this->app['session']['auth']['is_verified'] ?? '';
     }
 
     /**
@@ -92,6 +94,6 @@ class TFAuthEntity
      */
     public function setIsVerified($value)
     {
-        Tygh::$app['session']['auth']['is_verified'] = $value;
+        $app['session']['auth']['is_verified'] = $value;
     }
 }

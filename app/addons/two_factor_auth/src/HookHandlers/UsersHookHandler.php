@@ -49,7 +49,7 @@ class UsersHookHandler
         if (!empty($_POST) && $is_verified !== TwoFactorAuthTypes::VERIFIED) {
             $tf_auth->unset();
             $tf_auth->set('user_id', $user_id);
-            $tf_auth->set('user_email', $_REQUEST['user_login']);
+            $tf_auth->set('user_email', $_REQUEST['user_login'] ?? '');
             $tf_auth->set('return_url', $_REQUEST['return_url'] ?? '');
 
             $tf_auth->setIsVerified(TwoFactorAuthTypes::NOT_VERIFIED);
