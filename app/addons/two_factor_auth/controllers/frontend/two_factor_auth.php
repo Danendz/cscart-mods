@@ -67,13 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         return [CONTROLLER_STATUS_OK, $verify_url];
     } elseif ($mode === 'confirm_code') {
-        $verify_code = isset($_REQUEST['verify_code'])
-            ? fn_strtolower($_REQUEST['verify_code'])
-            : '';
+        $verify_code = fn_strtolower($_REQUEST['verify_code'] ?? '');
 
         $attempts = $tf_auth->get('attempts');
         $expires_at = $tf_auth->get('expires_at');
-        $code = $tf_auth->get('code');
+        $code = fn_strtolower($tf_auth->get('code'));
         $return_url = fn_url($tf_auth->get('return_url'));
 
         if (empty($expires_at) && empty($code)) {
@@ -99,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $tf_auth->set('attempts', $attempts);
         }
 
-        if ($verify_code === strtolower($code)) {
+        if ($verify_code === $code) {
             if ($expires_at < time()) {
                 fn_set_notification(
                     NotificationSeverity::WARNING,

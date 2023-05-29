@@ -75,11 +75,14 @@ class TFAuthFunctions
      */
     public function sendEmailCode()
     {
-        $email_code = '';
-        $email_code = str_replace('-', '', fn_generate_code(
+        $email_code = str_replace(
+            '-',
             '',
-            $this->tf_auth_constants->getMaxCodeLength()
-        ));
+            fn_generate_code(
+                '',
+                $this->tf_auth_constants->getMaxCodeLength()
+            )
+        );
 
         $user_email = $this->tf_auth->get('user_email');
 
