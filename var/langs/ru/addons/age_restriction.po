@@ -28,6 +28,10 @@ msgctxt "Languages::age_restriction_access_restricted_by_age"
 msgid "Access to the site is closed because the age is not verified"
 msgstr "Доступ на сайт закрыт, так как возраст не подтвержден"
 
+msgctxt "Languages::age_restriction_wrong_date"
+msgid "You entered wrong date"
+msgstr "Вы ввели некорректную дату"
+
 msgctxt "SettingsOptions::age_restriction::min_age"
 msgid "Minimum age"
 msgstr "Минимальный возраст"
