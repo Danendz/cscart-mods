@@ -22,10 +22,6 @@ if (!defined('BOOTSTRAP')) {
 
 $auth = Tygh::$app['session']['auth'];
 
-if ($auth['user_id'] !== 0) {
-    return;
-}
-
 $is_legit = fn_get_cookie(AGE_RESTRICTION_IS_LEGIT);
 $min_age = '';
 
