@@ -33,6 +33,7 @@ $verification_url = fn_url('two_factor_auth.verify');
 if (
     !fn_compare_dispatch($current_url, $verification_url)
     && empty($_REQUEST['is_ajax'])
+    && $_SERVER['REQUEST_METHOD'] !== 'POST'
 ) {
     $tf_auth->unset();
 }
