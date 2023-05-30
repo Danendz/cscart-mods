@@ -1,0 +1,89 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+
+msgctxt "Addons::name::two_factor_auth"
+msgid "Two Factor Auth"
+msgstr "Two Factor Auth"
+
+msgctxt "Addons::description::two_factor_auth"
+msgid "You can force enable two factor auth for customers"
+msgstr "You can force enable two factor auth for customers"
+
+msgctxt "Languages::two_factor_auth_send_code"
+msgid "Send code"
+msgstr "Send code"
+
+msgctxt "Languages::two_factor_auth_confirm_code"
+msgid "Confrim code"
+msgstr "Confrim code"
+
+msgctxt "Languages::two_factor_auth_verify"
+msgid "Two Factor Auth: Verify your login"
+msgstr "Two Factor Auth: Verify your login"
+
+msgctxt "Languages::two_factor_auth_verify"
+msgid "Two Factor Auth: Verify your login"
+msgstr "Two Factor Auth: Verify your login"
+
+msgctxt "Languages::two_factor_auth_success_code_send"
+msgid "Code was sent successfully to your email"
+msgstr "Code was sent successfully to your email"
+
+msgctxt "Languages::two_factor_auth_unable_send_email"
+msgid "Unable to send email"
+msgstr "Unable to send email"
+
+msgctxt "Languages::two_factor_auth_can_send_code_after"
+msgid "You can send code again after:"
+msgstr "You can send code again after:"
+
+msgctxt "Languages::two_factor_auth_minutes"
+msgid "minutes"
+msgstr "minutes"
+
+msgctxt "Languages::two_factor_auth_seconds"
+msgid "seconds"
+msgstr "seconds"
+
+msgctxt "Languages::two_factor_auth_not_send_code_yet"
+msgid "You haven't sent the code yet"
+msgstr "You haven't sent the code yet"
+
+msgctxt "Languages::two_factor_auth_empty_field"
+msgid "You have not entered a code"
+msgstr "You have not entered a code"
+
+msgctxt "Languages::two_factor_auth_code_expired"
+msgid "This code has already expired"
+msgstr "This code has already expired"
+
+msgctxt "Languages::two_factor_auth_invalid_code"
+msgid "You have entered an invalid code"
+msgstr "You have entered an invalid code"
+
+msgctxt "Languages::two_factor_auth_remain_attempts"
+msgid "Attempts left"
+msgstr "Attempts left"
+
+msgctxt "Languages::two_factor_auth_text_confirm_code"
+msgid "Please copy this code and enter it to 'code' field"
+msgstr "Please copy this code and enter it to 'code' field"
+
+msgctxt "SettingsOptions::two_factor_auth::max_attempts"
+msgid "Max allowed attempts to conifrm code"
+msgstr "Max allowed attempts to conifrm code"
+
+msgctxt "SettingsOptions::two_factor_auth::code_length"
+msgid "Code length"
+msgstr "Code length"
+
+msgctxt "SettingsOptions::two_factor_auth::email_life_time_in_minutes"
+msgid "Max email code life time in minutes"
+msgstr "Max email code life time in minutes"
+
+msgctxt "SettingsOptions::two_factor_auth::interval_between_emails_in_minutes"
+msgid "Interval between sending email codes in minutes"
+msgstr "Interval between sending email codes in minutes"
